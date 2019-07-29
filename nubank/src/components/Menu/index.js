@@ -14,7 +14,8 @@ const Menu = (props) => {
       <Code>
         <QRCode
           value="https://rockeseat.com.br"
-          size={80}
+          size={500}
+
           fgColor="#FFF"
           bgColor="#8B10AE"
         />

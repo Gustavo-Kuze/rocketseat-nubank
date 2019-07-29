@@ -1,4 +1,4 @@
-import { StyleSheet, Animated } from "react-native";
+import { StyleSheet, Animated, Dimensions } from "react-native";
 import styled from "styled-components/native";
 
 export const Container = styled(Animated.ScrollView)`
@@ -7,8 +7,10 @@ export const Container = styled(Animated.ScrollView)`
 
 export const Code = styled.View`
   background: #fff;
-  padding: 10px;
-  align-self: center;
+  padding-top: 10px;
+  padding-left: ${Dimensions.get("screen").width / 2}px ;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Nav = styled.View`
