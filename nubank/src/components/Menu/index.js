@@ -1,18 +1,43 @@
 import React from "react";
-import { Container, Code } from "./styles";
+import { Container, Code, Nav, NavItem, NavText, SignOutButton, SignOutButtonText } from "./styles";
 import QRCode from "react-native-qrcode";
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 const Menu = () => {
-  return <Container >
+  return (
+    <Container>
       <Code>
-          <QRCode 
-            value="https://rockeseat.com.br"
-            size={80}
-            bgColor="#FFF"
-            fgColor="#8B10AE"
-          />
+        <QRCode
+          value="https://rockeseat.com.br"
+          size={80}
+          fgColor="#FFF"
+          bgColor="#8B10AE"
+        />
       </Code>
-  </Container>;
+      <Nav>
+        <NavItem>
+          <Icon name="help-outline" size={20} color="#FFF" />
+          <NavText>Me ajuda</NavText>
+        </NavItem>
+        <NavItem>
+          <Icon name="person-outline" size={20} color="#FFF" />
+          <NavText>Perfil</NavText>
+        </NavItem>
+        <NavItem>
+          <Icon name="credit-card" size={20} color="#FFF" />
+          <NavText>Configurar cartão</NavText>
+        </NavItem>
+        <NavItem>
+          <Icon name="smartphone" size={20} color="#FFF" />
+          <NavText>Configurações do app</NavText>
+        </NavItem>
+      </Nav>
+
+      <SignOutButton onPress={() => {}}>
+        <SignOutButtonText>SAIR DO APP</SignOutButtonText>
+      </SignOutButton>
+    </Container>
+  );
 };
 
 export default Menu;
